@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elements: Chemistry Database</title>
+	<link rel="stylesheet" type="text/css" href="e.css">
+	<script src="jquery-3.5.1.min.js"></script>
+	<script>
+		/*function loadDoc() {
+	  		var xhttp = new XMLHttpRequest();
+	  		xhttp.onreadystatechange = function() {
+	    	if (this.readyState == 4 && this.status == 200) {
+	      		hide(document.getElementById("image"));
+	    		document.getElementById("result").innerHTML = 
+	      		this.responseText;
+	    	}
+	  	};
+	  	xhttp.open("POST", "SearchTermsServlet", true);
+	  	xhttp.send();
+		}*/
+		$(document).ready(function(){
+			$('form[name=elements]').submit(function loadDoc(){
+				event.preventDefault();
+				var search_value = $('#elements').val().trim();
+				$.ajax({
+					url: "SearchItems",
+					data: {
+						elements: search_value
+					},
+					type:"POST",
+					dataType: "html",
+					success: function (data){
+						$('#image').hide();
+						$('#outershell').html(data);
+					}
+				});
+			});
+			$('#search_button').click(function loadD(){
+				var search_value = $('#elements').val().trim();
+				$.ajax({
+					url: "SearchItems",
+					data: {
+						elements: search_value
+					},
+					type:"POST",
+					dataType: "html",
+					success: function (data){
+						$('#outershell').html(data);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h2> Chemistry Database: Elements Edition</h2>
+	</div>
+	<div>
+		<form name="elements">
+			<a class="active" href="chem.html">Home</a>
+			<input type="text" id="elements" name = "elements" placeholder="&nbsp;Element Name...">
+			<input type="button" id="search_button" value="Search">
+			<!--  <img class="pt_image" src="download6.png" id="image"> -->
+		</form>
+	</div>
+	<div id="outershell">
+	</div>
+</body>
+</html>

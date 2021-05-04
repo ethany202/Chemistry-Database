@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
+h1 {
+	font-weight: none;
+	font-family: sans-serif;
+	font-size: 51px;
+	color: white;
+	letter-spacing: 3px;
+}
+body{
+	font-family: monospace;
+	font-size: 18px;
+	background-color: #323232;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-image: "backgroundpic6.jpg";
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+
+			background-size: cover;
+}
+div{
+	text-align: center;
+}
+#terms, #mc, #e{
+	background-color: #0f0f0f;
+	text-decoration: none;
+	outline: none;
+	border: 3px solid #eae6e3;
+	padding: 20px 90px;
+	margin: 4px;
+	font-size: 22px;
+	font-family: "Source Code Pro";
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+#terms:hover{
+	background-color: white;
+	color: #0f0f0f;
+	transition: 0.2s;
+	cursor: pointer;
+}
+#mc:hover{
+	background-color: white;
+	color: #0f0f0f;
+	transition: 0.2s;
+	cursor: pointer;
+}
+#e:hover{
+	background-color: white;
+	color: #0f0f0f;
+	transition: 0.2s;
+	cursor: pointer;
+}
+button{
+	background-color: #0f0f0f;
+	text-decoration: none;
+	outline: none;
+	border: 1px solid #eae6e3;
+	padding: 20px 20px;
+	margin: 4px;
+	font-size: 13px;
+	font-family: "Source Code Pro";
+	color: white;
+	font-weight:bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}

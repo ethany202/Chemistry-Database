@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Molecules + Compounds: Chemistry Database</title>
+	<link rel="stylesheet" type="text/css" href="mc.css">
+	<script src="jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('form[name=molcom]').submit(function loadDoc(){
+				event.preventDefault();
+				var search_value = $('#molcom').val().trim();
+				$.ajax({
+					url: "SearchItems",
+					data: {
+						molcom: search_value
+					},
+					type:"POST",
+					dataType: "html",
+					success: function (data){
+						$('#outershell').html(data);
+					}
+				});
+			});
+			$('#search_button').click(function loadD(){
+				var search_value = $('#molcom').val().trim();
+				$.ajax({
+					url: "SearchItems",
+					data: {
+						molcom: search_value
+					},
+					type:"POST",
+					dataType: "html",
+					success: function (data){
+						$('#outershell').html(data);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h2> Chemistry Database: Molecules + Compounds Edition</h2>
+	</div>
+	<div>
+		<form name="molcom">
+			<a class="active" href="chem.html">Home</a>
+			<input type="text" id="molcom" name = "molcom" placeholder="&nbsp;Name...">
+			<input type="button" id="search_button" value="Search">
+		</form>
+	</div>
+	<div id="outershell">
+		<div id="result">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900);
+form{
+	overflow: hidden;
+	background-color: #0f0f0f;
+}
+a{
+	color: white;
+	font-family: "Source Code Pro";
+	text-transform: uppercase;
+	font-size:19px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 9px 9px;
+	text-align: center;
+	margin: 30px;
+}
+a:hover{
+	background-color: white;
+	color: #0f0f0f;
+	transition-delay: 0.1s;
+}
+input[type=text]{
+	font-size: 15px;
+	border-color: white;
+	background-color: #0f0f0f;
+	color:white;
+	padding: 10px 10px;
+	font-family: "Source Code Pro";
+	border-radius: 1%;
+	border: 2px solid;
+	border-right: 0;
+	font-style: italic;
+}
+input[type=button]{
+	font-size: 19px;
+	background-color: white;
+	color:#0f0f0f;
+	padding: 10.3px 8px;
+	font-family: monospace;
+	border-radius: 1%;
+	border-color: white;
+	text-decoration: none;
+	border: 1px solid;
+	cursor: pointer;
+}
+::placeholder{
+	color:#eae6e3;
+	font-family: "Source Code Pro";
+}
+body{
+	background-color: #0f0f0f;
+	color: white;
+}
+div{
+	text-align: center;
+}
+h2{
+	font-family:monospace;
+	text-transform: uppercase;
+	font-size: 43px;
+	margin: 30px;
+	border-bottom: solid;
+	padding: 30px;
+}
+#outershell{
+	margin: 75px;
+	font-size: 25px;
+	font-family: monospace;
+	text-align: left;
+	padding: 40px 63px;
+}
